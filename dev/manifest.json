@@ -1,0 +1,35 @@
+{
+	"name": "聊天灌水机",
+	"version": "0.0.1",
+	"manifest_version": 2,
+	"description": "微信、扣扣浏览器端插件",
+
+	"browser_action": {
+		"default_icon": "app/icon.png",
+		"default_title": "Just for fun!",
+		"default_popup": "app/popup.html"
+	},
+
+	"icons": {
+		"128": "app/icon.png",
+		"16": "app/icon.png"
+	},
+
+	"permissions": ["tabs", "http://*/*", "https://*/*"],
+
+	"content_scripts": [{
+		"matches": [
+			"https://wx2.qq.com/*",
+			"https://w.qq.com/*",
+			"https://weibo.com/*",
+			"http://wx2.qq.com/*",
+			"http://w.qq.com/*",
+			"http://weibo.com/*"
+			],
+		"js": ["app/new_content.js"]
+	}],
+
+	"background": {
+		"scripts": ["app/background.js"]
+	}
+}

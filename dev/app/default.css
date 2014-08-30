@@ -1,0 +1,51 @@
+* {
+	padding: 0;
+	margin: 0;
+	outline: none;
+}
+
+body {
+	width: 320px;
+	padding: 10px;
+}
+
+header {
+	padding: 5px;
+	margin-bottom: 10px;
+	border-bottom: 1px dashed gray;
+}
+
+h3 {
+	font-family: '华文细黑', '微软雅黑', sans-serif;
+}
+
+label.item-header {
+	font-weight: bold;
+}
+
+div.input-group {
+	padding: 0.5em;
+	border-bottom: 1px solid dashed;
+	font-size: 12px;
+	font-family: 'consolas', monospace, '华文细黑', '微软雅黑', sans-serif;
+}
+
+input, label, button {
+	vertical-align: middle;
+}
+
+div.msg-list-item {
+	margin-left: 2em;
+	height: 20px;
+}
+
+div.msg-list-item-toolbar {
+	float: right;
+}
+
+span.text-tips {
+	color: #aaa;
+}
+span.text-warn {
+	color: red;
+}

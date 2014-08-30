@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>弹出页面</title>
+	<link rel="stylesheet" href="default.css">
+	<script src="jquery.js"></script>
+	<script src="popup.js"></script>
+</head>
+<body>
+	<header>
+		<h3>批量消息♂插入</h3>
+	</header>
+	<div class="input-group">
+		<label class="item-header">发送间隔：</label>
+		<input id="interval-min" type="number" style="width: 70px" value="500" min="100" max="3600000"> ~ <input id="interval-max" type="number" style="width: 70px" value="1000" min="100" max="3600000"> ms
+	</div>
+
+	<div class="input-group">
+		<label class="item-header">消息顺序：</label>
+		<input type="radio" name="message-order" id="message-order-seq" value="seq"><label for="message-order-seq">顺序循环</label>
+		<input type="radio" name="message-order" id="message-order-random" value="random"><label for="message-order-random">随机播放</label>
+		<input type="radio" name="message-order" id="message-order-single" value="single"><label for="message-order-single">单曲重复</label>
+	</div>
+
+	<div class="input-group">
+		<label class="item-header">发送次数：</label>
+		<input id="send-times" type="number" style="width: 70px;">
+	</div>
+
+	<div class="input-group">
+		<label class="item-header">添加消息：</label>
+		<input id="add-msg-input" type="text" style="width:170px">
+		<div style="float: right">
+			<button id='add-msg-btn'>添</button>
+		</div>
+	</div>
+
+	<div class="input-group">
+		<label class="item-header">消息列表：</label>
+	</div>
+
+	<div class="input-group" id="msg-list">
+		<template id="msg-list-item-tpl">
+			<div class="msg-list-item">
+				<input class="msg-list-input" type="checkbox">
+				<label class="msg-list-label"></label>
+				<div class="msg-list-item-toolbar">
+					<button>删</button>
+				</div>
+			</div>
+		</template>
+	</div>
+	<div class="input-group">
+		<button id='btn-send'>开始发送</button>
+		<span id="span-tips" class="text-tips">请至少选中一条</span>
+	</div>
+</body>
+</html>
